@@ -11,6 +11,7 @@
             <StackLayout Orientation="Horizontal">
               <Label Text="{Binding Codigo}" TextColor="#000000"/>
               <Label Text="{Binding Nome}" TextColor="#000000"/>
+	          <Label Text="{Binding Fabricante}" TextColor="#000000"/>
             </StackLayout>
           </StackLayout>
         </ViewCell>

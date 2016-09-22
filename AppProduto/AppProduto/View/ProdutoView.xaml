@@ -20,7 +20,8 @@
       <Label Text="Codigo" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
       <Entry Text="{Binding Codigo}" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="1" VerticalOptions="Center"/>
       <Label Text="Nome do Produto" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
-      <Entry Text="{Binding Nome}" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" VerticalOptions="Center"/>      
+      <Entry Text="{Binding Nome}" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" VerticalOptions="Center"/>
+				
       <Button Image="save.png" Text="Salvar" Command="{Binding Salvar}" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" VerticalOptions="CenterAndExpand"/>
       <Button Image="list.png" Text="Listar" Command="{Binding Listar}" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="2" VerticalOptions="CenterAndExpand"/>
       <Button Image="plusButton.png" Text="Adicionar Fabricante" Command="{Binding AbrirFabricante}"  Grid.Row="3" Grid.ColumnSpan="4" Grid.Column="0" VerticalOptions="CenterAndExpand"></Button>
