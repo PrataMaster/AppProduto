@@ -10,28 +10,16 @@ namespace AppProduto.ViewModel
 {
     public class ListaDeProdutosVM : ViewModelBase
     {
+		private ObservableCollection<Model.Produto> listaProduto;
+		public ObservableCollection<Model.Produto> ListaProduto { get { return listaProduto;} set { listaProduto = value; Notify("ListaProduto");} }
 
-        public ListaDeProdutosVM(ObservableCollection<Model.Produto> prod)
-        {
-            this.Produtos = prod;
-
-        }
-
-        private ObservableCollection<Model.Produto> produtos;
-
-        public ObservableCollection<Model.Produto> Produtos
-        {
-            get
-            {
-
-                return produtos;
-            }
-            set
-            {
-                produtos = value;
-                Notify("Produtos");
-            }
-        }
+		public ListaDeProdutosVM()
+		{
+			listaProduto = new ObservableCollection<Model.Produto>();
+			using (var dados = new DAO.ProdutoDAO())
+			{
+				listaProduto = new ObservableCollection<Model.Produto>(dados.Lista());
+			}
+		}
     }
 }
-    

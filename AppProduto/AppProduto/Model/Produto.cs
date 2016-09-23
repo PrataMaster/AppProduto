@@ -16,6 +16,7 @@ namespace AppProduto.Model
 		[MaxLength(70)]
         public string Nome { get; set; }
         public double Preco { get; set; }
+		public string NomeFabricante { get; set; }
 		[ForeignKey(typeof(Fabricante))]
 		public int CodigoFabricante { get;set;}
 		[OneToOne]

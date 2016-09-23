@@ -3,17 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppProduto.View.ListaDeProdutosView">
   <StackLayout BackgroundColor="#424242" Padding="0,20,0,0">
-  <ListView ItemsSource="{Binding Produtos}">
+  <ListView ItemsSource="{Binding ListaProduto}">
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
-          <StackLayout BackgroundColor="#9E9E9E" Orientation="Vertical">
-            <StackLayout Orientation="Horizontal">
-              <Label Text="{Binding Codigo}" TextColor="#000000"/>
-              <Label Text="{Binding Nome}" TextColor="#000000"/>
-	          <Label Text="{Binding Fabricante}" TextColor="#000000"/>
-            </StackLayout>
-          </StackLayout>
+			<Grid>
+                <Grid.RowDefinitions>
+                  	<RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  	<ColumnDefinition Width="Auto" />
+                  	<ColumnDefinition Width="Auto" />
+                  	<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>			
+              		<Label Text="{Binding Codigo}" TextColor="#000000" Grid.Row="0" Grid.Column="0"/>
+              		<Label Text="{Binding Nome}" TextColor="#000000" Grid.Row="0" Grid.Column="1"/>
+	          		<Label Text="{Binding CodigoFabricante}" TextColor="#000000" Grid.Row="0" Grid.Column="2"/>
+					<Label Text="{Binding NomeFabricante}" TextColor="#000000" Grid.Row="0" Grid.Column="3"/>
+			</Grid>
         </ViewCell>
       </DataTemplate>
     </ListView.ItemTemplate>

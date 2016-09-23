@@ -11,10 +11,10 @@ namespace AppProduto.View
 {
     public partial class ListaDeProdutosView : ContentPage
     {
-        public ListaDeProdutosView(ObservableCollection<Model.Produto> produtos)
+        public ListaDeProdutosView()
         {
             InitializeComponent();
-            this.BindingContext = new ViewModel.ListaDeProdutosVM(produtos);
+			this.BindingContext = new ViewModel.ListaDeProdutosVM();
         }
     }
 }

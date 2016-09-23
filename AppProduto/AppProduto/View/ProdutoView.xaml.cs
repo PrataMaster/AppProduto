@@ -14,7 +14,11 @@ namespace AppProduto.View
         {
             InitializeComponent();
             this.BindingContext = new ViewModel.ProdutoVM();
-            
         }
-    }
+		public ProdutoView(Model.Fabricante fab)
+		{
+			InitializeComponent();
+			this.BindingContext = new ViewModel.ProdutoVM(fab);
+		}
+	}
 }

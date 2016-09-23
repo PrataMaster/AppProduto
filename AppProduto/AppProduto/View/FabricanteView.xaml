@@ -9,7 +9,7 @@
     <Label Text="Nome Fabricante"></Label>
     <Entry Text="{Binding Nome}"></Entry>
     <Button Text="Salvar" Command="{Binding SalvarCommand}"></Button>
-    <ListView ItemsSource="{Binding Fabricante}">
+    <ListView ItemsSource="{Binding Fabricante}" x:Name="ListaFabricante">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
