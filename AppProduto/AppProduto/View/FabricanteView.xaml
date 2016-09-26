@@ -1,36 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namesspace:AppProduto.ViewModel"
-             x:Class="AppProduto.View.FabricanteView">
-  <StackLayout Padding="20">
-    <Label Text="Codigo"></Label>
-    <Entry Text="{Binding Codigo}"></Entry>
-    <Label Text="Nome Fabricante"></Label>
-    <Entry Text="{Binding Nome}"></Entry>
-    <Button Text="Salvar" Command="{Binding SalvarCommand}"></Button>
-    <ListView ItemsSource="{Binding Fabricante}" x:Name="ListaFabricante">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-            <StackLayout>
-              <Grid>
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="164" />
-                  <ColumnDefinition Width="52" />
-                  <ColumnDefinition Width="52" />
-                </Grid.ColumnDefinitions>
-                <Label Text="{Binding Nome}" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"></Label>
-                <Button Image="edit.png" Command="{Binding EditCommand}" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"></Button>
-                <Button Image="dustbin.png" Command="{Binding DeleteCommand}" Grid.Row="0" Grid.Column="2" VerticalOptions="Center"></Button>
-              </Grid>
-            </StackLayout>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namesspace:AppProduto.ViewModel" x:Class="AppProduto.View.FabricanteView">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="30" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Label Text="Codigo" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" />
+			<Entry Text="{Binding Codigo}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" VerticalOptions="Center" />
+			<Label Text="Nome Fabricante" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" />
+			<Entry Text="{Binding Nome}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" VerticalOptions="Center" />
+			<Button Text="Salvar" Command="{Binding SalvarCommand}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" VerticalOptions="Center" />
+			<ListView ItemsSource="{Binding Fabricante}" x:Name="ListaFabricante" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="Auto" />
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*" />
+									<ColumnDefinition Width="52" />
+									<ColumnDefinition Width="52" />
+								</Grid.ColumnDefinitions>
+								<Label Text="{Binding Nome}" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+								<Button Image="edit.png" Command="{Binding EditCommand}" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+								<Button Image="dustbin.png" Command="{Binding DeleteCommand}" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" />
+							</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</ContentPage.Content>
 </ContentPage>

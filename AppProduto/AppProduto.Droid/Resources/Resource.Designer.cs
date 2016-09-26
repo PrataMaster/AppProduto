@@ -2211,14 +2211,17 @@ namespace AppProduto.Droid
 			// aapt resource value: 0x7f0200a3
 			public const int mr_ic_play_light = 2130837667;
 			
-			// aapt resource value: 0x7f0200a6
-			public const int notification_template_icon_bg = 2130837670;
+			// aapt resource value: 0x7f0200a7
+			public const int notification_template_icon_bg = 2130837671;
 			
 			// aapt resource value: 0x7f0200a4
 			public const int plusButton = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
 			public const int save = 2130837669;
+			
+			// aapt resource value: 0x7f0200a6
+			public const int splash = 2130837670;
 			
 			static Drawable()
 			{
@@ -3530,6 +3533,9 @@ namespace AppProduto.Droid
 			
 			// aapt resource value: 0x7f0a001a
 			public const int CardView_Light = 2131361818;
+			
+			// aapt resource value: 0x7f0a0172
+			public const int MainSplash = 2131362162;
 			
 			// aapt resource value: 0x7f0a0032
 			public const int Platform_AppCompat = 2131361842;
